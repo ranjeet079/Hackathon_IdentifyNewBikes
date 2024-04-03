@@ -34,20 +34,28 @@ public class Upcomingbikes extends BasePage {
 	@FindBy(id = "makeId")
 	public WebElement Brand;
 	
-	@FindBy(xpath = "//span[@class='zw-cmn-loadMore']") ////*[@id="div-gpt-ad-1558070816143-0"]
+    @FindBy(xpath = "//span[@class='zw-cmn-loadMore']") ////*[@id="div-gpt-ad-1558070816143-0"]
+	//span[normalize-space()='View More Bikes']
+//	@FindBy(xpath = "//span[normalize-space()='View More Bikes']")
 	public WebElement viewMoreBikesButton;
 	
 	//@FindBy(xpath = "//*[@id=\"div-gpt-ad-1529569826071-3\"]")
 	//public WebElement ScrollTop;
 	
 	
-	@FindBy(css = ".lnk-hvr.block.of-hid.h-height")
-	public List<WebElement> modelName;
+    @FindBy(css = ".lnk-hvr.block.of-hid.h-height")
+	//strong[@class="lnk-hvr block of-hid h-height"]
 	
-	@FindBy(xpath = "//li[contains(@class,'modelItem')]")
-	public List<WebElement> bikePrice;
+//	@FindBy(xpath= "//strong[@class='lnk-hvr block of-hid h-height']")
+    public List<WebElement> modelName;
 	
-	@FindBy(css = ".clr-try.fnt-14")
+    @FindBy(xpath = "//li[contains(@class,'modelItem')]")
+//	@FindBy(xpath = "//div[@class=\"b fnt-15\"]")
+    public List<WebElement> bikePrice;
+	
+    @FindBy(css = ".clr-try.fnt-14")
+	//div[@class="clr-try fnt-14"]
+//	@FindBy(xpath="//div[@class='clr-try fnt-14']")
 	public List<WebElement> dateOfBikes;
 	
 	
