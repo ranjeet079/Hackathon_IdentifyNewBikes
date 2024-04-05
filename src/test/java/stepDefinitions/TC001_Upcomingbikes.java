@@ -51,7 +51,7 @@ public class TC001_Upcomingbikes extends BaseClass {
 		// Write code here to select upcoming bikes
 		logger.info("Selecting Upcoming Bikes");
 		Upcomingbikes upcomingBike = new Upcomingbikes(driver);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		upcomingBike.selectUpcomingBikes();
 		
 
