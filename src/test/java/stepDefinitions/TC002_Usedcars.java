@@ -56,7 +56,7 @@ public class TC002_Usedcars extends BaseClass{
 
     @Then("The popular models should be displayed")
     public void the_popular_models_should_be_displayed() throws InterruptedException {
-    	
+    	Thread.sleep(2000);
         try {
             logger.info("Checking that the popular models are displayed");
             usedCar.extractPopularModels();
