@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
@@ -41,7 +42,7 @@ public class TC002_Usedcars extends BaseClass{
         }
     }
 
-    @When("I select Chennai used cars")
+    @And("I select Chennai used cars")
     public void i_select_Chennai_used_cars() throws InterruptedException {
         try {
         	Thread.sleep(2000);
