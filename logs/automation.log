@@ -267,3 +267,19 @@
 22:40:28.831 [main] DEBUG - Save part 'xl/worksheets/sheet3.xml'
 22:40:28.831 [main] DEBUG - Save part 'xl/worksheets/sheet4.xml'
 22:40:28.832 [main] INFO  - **** Finished TC_002_UsedCar ****
+22:44:22.322 [main] INFO  - **** Starting TC_003_LoginSignup ****
+22:44:22.327 [main] INFO  - Navigating to the homepage
+22:44:22.477 [main] INFO  - Clicking on the Login/Signup button
+22:44:31.820 [main] INFO  - Selecting the Google button
+22:44:40.101 [main] INFO  - Verifying that the Login/SignUp card is displayed
+22:44:50.649 [main] INFO  - Navigating to the Google Accounts sign in page
+22:45:05.776 [main] INFO  - Entering email
+22:45:12.068 [main] INFO  - Clicking on the next button
+22:45:17.424 [main] INFO  - Capturing error message
+22:45:27.487 [main] INFO  - **** Finished TC_003_LoginSignup ****
+22:45:37.790 [main] INFO  - **** Starting TC_002_UsedCar ****
+22:45:37.790 [main] INFO  - Navigating to the homepage
+22:45:37.811 [main] INFO  - Hovering over and selecting used cars
+22:45:42.058 [main] INFO  - Selecting Chennai used cars
+22:46:03.129 [main] INFO  - **** Starting TC_001_UpcomingBike ****
+22:46:03.130 [main] INFO  - clicking on  New Bikes 
