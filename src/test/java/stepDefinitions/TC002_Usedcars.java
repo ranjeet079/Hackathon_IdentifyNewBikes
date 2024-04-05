@@ -33,6 +33,7 @@ public class TC002_Usedcars extends BaseClass{
         try {
             logger.info("Hovering over and selecting used cars");
             usedCar.usedCarsMenu();
+            Thread.sleep(2000);
         } catch (Exception e) {
             logger.error("Failed to hover over and select used cars!!!");
             e.printStackTrace();
@@ -45,6 +46,7 @@ public class TC002_Usedcars extends BaseClass{
         try {
         	Thread.sleep(2000);
             logger.info("Selecting Chennai used cars");
+            
             usedCar.selectChennaiUsedCars();
         } catch (IOException e) {
             logger.error("Failed to select Chennai used cars!!!");
