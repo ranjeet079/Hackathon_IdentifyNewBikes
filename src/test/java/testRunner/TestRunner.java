@@ -10,7 +10,8 @@ import io.cucumber.junit.CucumberOptions;
 //plugin = {"pretty", "html:target/reports"},
 //plugin= {"pretty", "json:target/reports/cucumber.json"},
 //plugin = {"pretty", "junit:target/reports/cucumber.xml"},
-//tags="@smoketest")
+//tags="@smoketest",
+//)
 plugin= {"pretty", "html:reports/myreport.html", 
 		  "rerun:target/rerun.txt",
 		  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"

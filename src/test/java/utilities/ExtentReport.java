@@ -56,7 +56,7 @@ public class ExtentReport implements ITestListener {
 
 	public void onTestSuccess(ITestResult result) {
 	
-		test = extent.createTest(result.getTestClass().getName());
+		test = extent.createTest(result.getMethod().getMethodName());
 		test.assignCategory(result.getMethod().getGroups()); // to display groups in report
 		test.log(Status.PASS,result.getName()+" got successfully executed");
 		try {
@@ -69,7 +69,7 @@ public class ExtentReport implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
-		test = extent.createTest(result.getTestClass().getName());
+		test = extent.createTest(result.getMethod().getMethodName());
 		test.assignCategory(result.getMethod().getGroups());
 		
 		test.log(Status.FAIL,result.getName()+" got failed");
@@ -93,7 +93,7 @@ public class ExtentReport implements ITestListener {
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		test = extent.createTest(result.getTestClass().getName());
+		test = extent.createTest(result.getMethod().getMethodName());
 		test.assignCategory(result.getMethod().getGroups());
 		test.log(Status.SKIP, result.getName()+" got skipped");
 		test.log(Status.INFO, result.getThrowable().getMessage());

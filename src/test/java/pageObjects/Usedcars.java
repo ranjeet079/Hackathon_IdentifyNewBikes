@@ -31,7 +31,7 @@ public class Usedcars extends BasePage{
 	@FindBy(xpath = "//a[normalize-space()='Used Cars']")
 	WebElement usedCarsMenu;
 	
-	@FindBy(xpath = "//span[@onclick=\"goToUrl('/used-car/Chennai')\"]")
+	@FindBy(xpath = "//li/span[text()=\"Chennai\"]")
 	WebElement chennaiUsedCars;
 	
 	@FindBy(xpath = "//ul[@class=\"zw-sr-secLev usedCarMakeModelList popularModels ml-20 mt-10\"]/li/label")

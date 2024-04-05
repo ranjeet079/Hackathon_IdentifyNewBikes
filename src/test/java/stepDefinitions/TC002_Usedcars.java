@@ -41,8 +41,9 @@ public class TC002_Usedcars extends BaseClass{
     }
 
     @When("I select Chennai used cars")
-    public void i_select_Chennai_used_cars() {
+    public void i_select_Chennai_used_cars() throws InterruptedException {
         try {
+        	Thread.sleep(2000);
             logger.info("Selecting Chennai used cars");
             usedCar.selectChennaiUsedCars();
         } catch (IOException e) {
@@ -50,10 +51,12 @@ public class TC002_Usedcars extends BaseClass{
             e.printStackTrace();
             Assert.fail();
         }
+        
     }
 
     @Then("The popular models should be displayed")
-    public void the_popular_models_should_be_displayed() {
+    public void the_popular_models_should_be_displayed() throws InterruptedException {
+    	
         try {
             logger.info("Checking that the popular models are displayed");
             usedCar.extractPopularModels();

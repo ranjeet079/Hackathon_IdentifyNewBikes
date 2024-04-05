@@ -17,7 +17,8 @@ public class TC003_GoogleSignIn extends BaseClass {
 	Logger logger = LogManager.getLogger(TC003_GoogleSignIn.class);
 
 	@Given("I am on homepage")
-	public void i_am_on_the_homepage() {
+	public void i_am_on_the_homepage() throws InterruptedException {
+//        Thread.sleep(7000);
 		logger.info("**** Starting TC_003_LoginSignup ****");
 		try {
 			logger.info("Navigating to the homepage");
@@ -31,9 +32,11 @@ public class TC003_GoogleSignIn extends BaseClass {
 	}
 
 	@When("I click on the Login\\/Signup button")
-	public void i_click_on_the_Login_Signup_button() {
+	public void i_click_on_the_Login_Signup_button() throws InterruptedException {
+//		Thread.sleep(7000);
 		try {
 			logger.info("Clicking on the Login/Signup button");
+			Thread.sleep(3000);
 			lp.clickLoginSignUp();
 		} catch (Exception e) {
 			logger.error("Failed to click on the Login/Signup button!!!");
@@ -43,7 +46,8 @@ public class TC003_GoogleSignIn extends BaseClass {
 	}
 
 	@When("I select the Google button")
-	public void i_select_the_Google_button() {
+	public void i_select_the_Google_button() throws InterruptedException {
+//		Thread.sleep(7000);
 		try {
 			logger.info("Selecting the Google button");
 			lp.selectGoogleButton();
@@ -55,7 +59,8 @@ public class TC003_GoogleSignIn extends BaseClass {
 	}
 
 	@Then("The Login\\/SignUp card should be displayed")
-	public void the_Login_SignUp_card_should_be_displayed() {
+	public void the_Login_SignUp_card_should_be_displayed() throws InterruptedException {
+//		Thread.sleep(7000);
 		try {
 			logger.info("Verifying that the Login/SignUp card is displayed");
 			// Assuming screenshot() method captures and verifies the screenshot
@@ -68,7 +73,8 @@ public class TC003_GoogleSignIn extends BaseClass {
 	}
 
 	@Given("I am on the Google Accounts sign in page")
-	public void i_am_on_the_Google_Accounts_sign_in_page() {
+	public void i_am_on_the_Google_Accounts_sign_in_page() throws InterruptedException {
+//		Thread.sleep(7000);
 		try {
 			logger.info("Navigating to the Google Accounts sign in page");
 			// Assuming windowNavigate() method navigates to the given page
@@ -85,7 +91,8 @@ public class TC003_GoogleSignIn extends BaseClass {
 	}
 
 	@When("I enter my email")
-	public void i_enter_my_email() {
+	public void i_enter_my_email() throws InterruptedException {
+//		Thread.sleep(7000);
 		try {
 			logger.info("Entering email");
 			Loginpage lp = new Loginpage(driver);
@@ -98,7 +105,8 @@ public class TC003_GoogleSignIn extends BaseClass {
 	}
 
 	@When("I click on the next button")
-	public void i_click_on_the_next_button() {
+	public void i_click_on_the_next_button() throws InterruptedException {
+//		Thread.sleep(7000);
 		try {
 			logger.info("Clicking on the next button");
 			lp.clickNextButton();
@@ -110,7 +118,8 @@ public class TC003_GoogleSignIn extends BaseClass {
 	}
 
 	@Then("The error message should be captured if login fails")
-	public void the_error_message_should_be_captured_if_login_fails() {
+	public void the_error_message_should_be_captured_if_login_fails() throws InterruptedException {
+//		Thread.sleep(7000);
 		try {
 			logger.info("Capturing error message");
 			lp.captureErrorMsg();
@@ -121,4 +130,6 @@ public class TC003_GoogleSignIn extends BaseClass {
 		}
 		logger.info("**** Finished TC_003_LoginSignup ****");
 	}
+	
+	
 }

@@ -20,10 +20,15 @@ import factory.BaseClass;
 public class Upcomingbikes extends BasePage {
 	ExcelUtils Eu=new ExcelUtils();
 	
+	
+	
 	public Upcomingbikes(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
 	
 	@FindBy(xpath = "//a[normalize-space()='New Bikes']")
 	public WebElement NewBikes;
@@ -34,6 +39,12 @@ public class Upcomingbikes extends BasePage {
 	@FindBy(id = "makeId")
 	public WebElement Brand;
 	
+	@FindBy(xpath = "//option[text()='Honda']")
+	public WebElement HondaOption;
+	
+	@FindBy(xpath="//h1[normalize-space()='Honda Upcoming Bikes in India' ]")
+	public WebElement HondaPageTitle;
+	
     @FindBy(xpath = "//span[@class='zw-cmn-loadMore']") ////*[@id="div-gpt-ad-1558070816143-0"]
 	//span[normalize-space()='View More Bikes']
 //	@FindBy(xpath = "//span[normalize-space()='View More Bikes']")
@@ -42,7 +53,9 @@ public class Upcomingbikes extends BasePage {
 	//@FindBy(xpath = "//*[@id=\"div-gpt-ad-1529569826071-3\"]")
 	//public WebElement ScrollTop;
 	
-	
+	@FindBy(xpath="//li/div[@class='zw-con p-0 sl-card']")
+    public List<WebElement> allHondaBikes;
+    
     @FindBy(css = ".lnk-hvr.block.of-hid.h-height")
 	//strong[@class="lnk-hvr block of-hid h-height"]
 	
@@ -76,9 +89,14 @@ public class Upcomingbikes extends BasePage {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].click();", upcomingBikes);
 	}
-	//Handling Dropdown
-	public void clickBrand() {
+	
+	public void clickManufacturers() {
 		Brand.click();
+	}
+	
+	//Handling Dropdown
+	public void selectBrand() {
+//		Brand.click();
 		Select s=new Select(Brand);
 		s.selectByVisibleText("Honda");
 	}
@@ -118,6 +136,10 @@ public class Upcomingbikes extends BasePage {
 				row++;
 			}
 		}
+		
+		
+			
+		
 		//Thread.sleep(9000);
 		//JavascriptExecutor executor = (JavascriptExecutor) driver;
 		//executor.executeScript("arguments[0].scrollIntoView(true);", ScrollTop);
