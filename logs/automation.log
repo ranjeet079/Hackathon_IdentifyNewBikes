@@ -283,3 +283,16 @@
 22:45:42.058 [main] INFO  - Selecting Chennai used cars
 22:46:03.129 [main] INFO  - **** Starting TC_001_UpcomingBike ****
 22:46:03.130 [main] INFO  - clicking on  New Bikes 
+22:49:17.182 [main] INFO  - **** Starting TC_003_LoginSignup ****
+22:49:17.188 [main] INFO  - Navigating to the homepage
+22:49:17.376 [main] INFO  - Clicking on the Login/Signup button
+22:49:26.807 [main] INFO  - Selecting the Google button
+22:49:35.125 [main] INFO  - Verifying that the Login/SignUp card is displayed
+22:49:44.978 [main] INFO  - Navigating to the Google Accounts sign in page
+22:49:52.401 [main] ERROR - Failed to navigate to the Google Accounts sign in page!!!
+22:50:03.590 [main] INFO  - **** Starting TC_002_UsedCar ****
+22:50:03.590 [main] INFO  - Navigating to the homepage
+22:50:03.604 [main] INFO  - Hovering over and selecting used cars
+22:50:10.833 [main] INFO  - Selecting Chennai used cars
+22:50:31.641 [main] INFO  - **** Starting TC_001_UpcomingBike ****
+22:50:31.641 [main] INFO  - clicking on  New Bikes 
