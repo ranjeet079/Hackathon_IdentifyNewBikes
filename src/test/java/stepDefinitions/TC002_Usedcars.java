@@ -42,7 +42,7 @@ public class TC002_Usedcars extends BaseClass{
         }
     }
 
-    @And("I select Chennai used cars")
+    @When("I select Chennai used cars")
     public void i_select_Chennai_used_cars() throws InterruptedException {
         try {
         	Thread.sleep(2000);
