@@ -12,9 +12,9 @@ import pageObjects.Loginpage;
 import utilities.WindowHandle;
 import factory.BaseClass;
 
-public class TC003_GoogleSignIn extends BaseClass {
+public class step3_GoogleSignIn extends BaseClass {
 	private Loginpage lp = new Loginpage(driver);
-	Logger logger = LogManager.getLogger(TC003_GoogleSignIn.class);
+	Logger logger = LogManager.getLogger(step3_GoogleSignIn.class);
 
 	@Given("I am on homepage")
 	public void i_am_on_the_homepage() throws InterruptedException {

@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 //plugin = {"pretty", "html:target/reports"},
 //plugin= {"pretty", "json:target/reports/cucumber.json"},
 //plugin = {"pretty", "junit:target/reports/cucumber.xml"},
-tags="@SmokeTests",
+//tags="@SmokeTests",
 //)
 plugin= {"pretty", "html:reports/myreport.html", 
 		  "rerun:target/rerun.txt",

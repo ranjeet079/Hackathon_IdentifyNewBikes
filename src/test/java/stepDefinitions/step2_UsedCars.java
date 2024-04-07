@@ -12,9 +12,9 @@ import io.cucumber.java.en.Then;
 import pageObjects.Usedcars;
 import factory.BaseClass;
 
-public class TC002_Usedcars extends BaseClass{
+public class step2_UsedCars extends BaseClass{
     private Usedcars usedCar;
-    Logger logger=LogManager.getLogger(TC002_Usedcars.class);
+    Logger logger=LogManager.getLogger(step2_UsedCars.class);
 
     @Given("I am on the homepage")
     public void i_am_on_the_homepage() {

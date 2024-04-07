@@ -20,10 +20,10 @@ import pageObjects.Upcomingbikes;
 //import factory.BaseClass;
 import io.cucumber.java.en.Then;
 
-public class TC001_Upcomingbikes extends BaseClass {
+public class step1_UpcomingBikes extends BaseClass {
 	
 	
-	Logger logger=LogManager.getLogger(TC001_Upcomingbikes.class);
+	Logger logger=LogManager.getLogger(step1_UpcomingBikes.class);
 	Upcomingbikes upcomingBike = new Upcomingbikes(driver);
 	
 	@Given("I open the website Zigwheels.com")
@@ -50,7 +50,7 @@ public class TC001_Upcomingbikes extends BaseClass {
 	public void i_select_upcoming_bikes() throws InterruptedException, IOException {
 		// Write code here to select upcoming bikes
 		logger.info("Selecting Upcoming Bikes");
-		Upcomingbikes upcomingBike = new Upcomingbikes(driver);
+//		Upcomingbikes upcomingBike = new Upcomingbikes(driver);
 		Thread.sleep(4000);
 		upcomingBike.selectUpcomingBikes();
 		
@@ -148,7 +148,7 @@ public class TC001_Upcomingbikes extends BaseClass {
 		public void display_bike_details() throws IOException, InterruptedException {
 			// Write code here to display bike details
 			logger.info("Displaying bikes details");
-			Upcomingbikes upcomingBike = new Upcomingbikes(driver);
+//			Upcomingbikes upcomingBike = new Upcomingbikes(driver);
 			
 			Thread.sleep(2000);
 			upcomingBike.bikeDetails();
