@@ -1,7 +1,7 @@
 package stepDefinitions;
 //import java.io.IOException;
 
-import static org.testng.Assert.assertEquals;
+//import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 
@@ -50,7 +50,7 @@ public class step1_UpcomingBikes extends BaseClass {
 	public void i_select_upcoming_bikes() throws InterruptedException, IOException {
 		// Write code here to select upcoming bikes
 		logger.info("Selecting Upcoming Bikes");
-//		Upcomingbikes upcomingBike = new Upcomingbikes(driver);
+		Upcomingbikes upcomingBike = new Upcomingbikes(driver);
 		Thread.sleep(4000);
 		upcomingBike.selectUpcomingBikes();
 		
@@ -148,7 +148,7 @@ public class step1_UpcomingBikes extends BaseClass {
 		public void display_bike_details() throws IOException, InterruptedException {
 			// Write code here to display bike details
 			logger.info("Displaying bikes details");
-//			Upcomingbikes upcomingBike = new Upcomingbikes(driver);
+			Upcomingbikes upcomingBike = new Upcomingbikes(driver);
 			
 			Thread.sleep(2000);
 			upcomingBike.bikeDetails();
