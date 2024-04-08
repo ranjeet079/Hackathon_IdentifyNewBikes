@@ -1,6 +1,6 @@
 Feature: Validate the hover function over New bikes
 
-  @smokeTests @regressionTests @masterTests
+  @smokeTests @regressionTests
   Scenario: Validate the hover function over New bikes
     Given I open the website Zigwheels.com
     When I select upcoming bikes
@@ -9,7 +9,7 @@ Feature: Validate the hover function over New bikes
     And selecting Honda brand
     Then ViewMore button is visible or not
 
-  @RegressionTests @MasterTests
+  @RegressionTests
   Scenario: Validate bike details display
     Given I am on the bikes page
     Then I should see the names of the bikes

@@ -52,13 +52,13 @@ public class Hooks {
     public void addScreenshot(Scenario scenario) {
         
     	// this is for cucumber junit report
-        if(scenario.isFailed()) {
+//        if(scenario.isFailed()) {
         	
         	TakesScreenshot ts=(TakesScreenshot) driver;
         	byte[] screenshot=ts.getScreenshotAs(OutputType.BYTES);
         	scenario.attach(screenshot, "image/png",scenario.getName());
         	            
-        }
+//        }
       
     }
    

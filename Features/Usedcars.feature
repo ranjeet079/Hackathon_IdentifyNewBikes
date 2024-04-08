@@ -1,7 +1,6 @@
-@regression @master
 Feature: Validate the used cars details
 
-  @RegressionTests @SmokeTests @MasterTests
+  @RegressionTests @SmokeTests 
   Scenario: Validate the used cars details
     Given I am on the homepage
     When Zigwheels logo is visible or not

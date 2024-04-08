@@ -74,9 +74,9 @@ public class step2_UsedCars extends BaseClass{
         try {
         	
             logger.info("Selecting Chennai used cars");
-            Thread.sleep(2000);
+            Thread.sleep(4000);
             usedCar.selectChennaiUsedCars();
-            Thread.sleep(2000);
+//            Thread.sleep(2000);
         } catch (IOException e) {
             logger.error("Failed to select Chennai used cars!!!");
             e.printStackTrace();
