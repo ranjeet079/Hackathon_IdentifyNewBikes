@@ -27,17 +27,25 @@ public class Usedcars extends BasePage {
 	 */
 
 	@FindBy(xpath = "//a[normalize-space()='Used Cars']")
+	public
 	WebElement usedCarsMenu;
 
-	@FindBy(xpath = "//li/span[text()=\"Chennai\"]")
+	@FindBy(xpath = "//li/span[text()='Chennai']")
+	
 //	@FindBy(xpath = "*//span[@data-tag-url='/used-car/Chennai']")
-	WebElement chennaiUsedCars;
+	public WebElement chennaiUsedCars;
 
 	@FindBy(xpath = "//ul[@class=\"zw-sr-secLev usedCarMakeModelList popularModels ml-20 mt-10\"]/li/label")
 	List<WebElement> checkboxOfCars;
 
-	@FindBy(xpath = "//span[normalize-space()='Brand and Model']")
+//	@FindBy(xpath = "//span[normalize-space()='Brand and Model']")
+	@FindBy(xpath = "//div[@class='zm-cmn-colorBlack ml-30 mob-nonclick div-h3 mt-20 mb-10']")
+	
 	WebElement BrandAndModel;
+	
+	@FindBy(xpath="//img[@alt='ZigWheels - New Cars, Used Cars, Bikes Prices, News, Reviews, QnA']")
+	public
+			WebElement logo;
 
 	public void usedCarsMenu() {
 

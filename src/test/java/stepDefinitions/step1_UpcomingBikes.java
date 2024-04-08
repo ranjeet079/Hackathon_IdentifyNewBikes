@@ -59,7 +59,7 @@ public class step1_UpcomingBikes extends BaseClass {
 	
 	@Then("Redirected to upcoming bikes page")
 	public void RedirectedOnUpcomingBike() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		logger.info("checking Upcoming Bikes page is displayed or not");
 		String actlink=upcomingBike.driver.getCurrentUrl();
 		String explink="https://www.zigwheels.com/upcoming-bikes";
@@ -69,7 +69,7 @@ public class step1_UpcomingBikes extends BaseClass {
     @When("Clicking on manufacturers dropdown and check for Honda")
     public void manufacturersDropDown() throws InterruptedException {
     	logger.info("clicking on Manufacturers dropdown");
-    	Thread.sleep(2000);
+    	Thread.sleep(3000);
     	// Click on Dropdown
     	upcomingBike.clickManufacturers();
     	Assert.assertTrue(upcomingBike.HondaOption.isDisplayed(), "Element is not visible.");
@@ -90,7 +90,7 @@ public class step1_UpcomingBikes extends BaseClass {
     @When("selecting Honda brand")
     public void selectHonda() throws InterruptedException {
     	logger.info("selecting Honda brand");
-    	Thread.sleep(2000);
+    	Thread.sleep(3000);
     	upcomingBike.selectBrand();
     	Assert.assertTrue(upcomingBike.HondaPageTitle.isDisplayed(), "Element is not visible.");
     	// View more bikes
@@ -101,7 +101,7 @@ public class step1_UpcomingBikes extends BaseClass {
     @Then("ViewMore button is visible or not")
     public void viewMoreButton() throws InterruptedException {
     	logger.info("checking ViewMore button visibility");
-    	Thread.sleep(2000);
+    	Thread.sleep(3000);
     	Assert.assertTrue(upcomingBike.viewMoreBikesButton.isDisplayed(), "Element is not visible.");
     	upcomingBike.clickViewMoreButton();
     }
@@ -111,10 +111,15 @@ public class step1_UpcomingBikes extends BaseClass {
 	    public void i_am_on_the_bikes_page() throws InterruptedException, IOException {
 		  
 		    upcomingBike.HoverNewBikes();
+		    Thread.sleep(1000);
 		    upcomingBike.selectUpcomingBikes();
-		    upcomingBike.clickManufacturers(); 
+		    Thread.sleep(1000);
+		    upcomingBike.clickManufacturers();
+		    Thread.sleep(1000);
 		    upcomingBike.selectBrand();
+		    Thread.sleep(1000);
 		    upcomingBike.clickViewMoreButton();
+		    Thread.sleep(1000);
 			logger.info("checking Honda upcoming Bikes page is displayed or not");
 			String actlink=upcomingBike.driver.getCurrentUrl();
 			String explink="https://www.zigwheels.com/upcoming-honda-bikes";
@@ -122,24 +127,27 @@ public class step1_UpcomingBikes extends BaseClass {
 	    }
 
 	    @Then("I should see the names of the bikes")
-	    public void i_should_see_the_names_of_the_bikes() {
+	    public void i_should_see_the_names_of_the_bikes() throws InterruptedException {
 	    	logger.info("checking all honda bikes names are there or not");
+	    	Thread.sleep(2000);
 	    	int expectednumber=upcomingBike.allHondaBikes.size();
 	    	int actualNumber=upcomingBike.modelName.size();
 	    	Assert.assertEquals(actualNumber, expectednumber,"some of the bike names are not displayed");	  
 	    }
 
 	    @Then("I should see the prices of the bikes")
-	    public void i_should_see_the_prices_of_the_bikes() {
+	    public void i_should_see_the_prices_of_the_bikes() throws InterruptedException {
 	    	logger.info("checking all honda bikes prices are there or not");
+	    	Thread.sleep(2000);
 	    	int expectednumber=upcomingBike.allHondaBikes.size();
 	    	int actualNumber=upcomingBike.bikePrice.size();
 	    	Assert.assertEquals(actualNumber, expectednumber,"some of the bike prices are not displayed");	
 	    }
 
 	    @Then("I should see the expected dates of the bikes")
-	    public void i_should_see_the_expected_dates_of_the_bikes() {
+	    public void i_should_see_the_expected_dates_of_the_bikes() throws InterruptedException {
 	    	logger.info("checking all honda bikes expected dates are there or not");
+	    	Thread.sleep(2000);
 	    	int expectednumber=upcomingBike.allHondaBikes.size();
 	    	int actualNumber=upcomingBike.dateOfBikes.size();
 	    	Assert.assertEquals(actualNumber, expectednumber,"some of the bike dates are not displayed");
